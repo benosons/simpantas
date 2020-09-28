@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>SIM PANTAS</title>
+  <!-- Bootstrap core CSS-->
+  <!-- Custom fonts for this template-->
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<link href="{{base_url}}assets/ltr/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+	<link href="{{base_url}}assets/ltr/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="{{base_url}}assets/ltr/css/core.css" rel="stylesheet" type="text/css">
+	<link href="{{base_url}}assets/ltr/css/components.css" rel="stylesheet" type="text/css">
+	<link href="{{base_url}}assets/ltr/css/colors.css" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
+
+
+    <style type="text/css">
+    #notif{
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        z-index: 9999;
+        opacity: 0.9;
+        width: 325px;
+        font-size: 12px;
+        /*display: none;*/
+        }
+
+        .navbar-brand > img {
+            margin-top: -5px;
+            height: 30px;
+        }
+
+        .bg-rk {
+            background-color: #fff;
+            border-color: #fff;
+            color: #fff;
+        }
+
+        .bg-hejo {
+            background-color: #339e6a;
+            border-color: #339e6a;
+            color: #fff;
+        }
+
+        .bg-koneng {
+            background-color: #ffd035!important;
+            border-color: #ffd035;
+            color: #fff;
+        }
+
+        .navbar-brand > img {
+          margin-top: -12px!important;
+          height: 45px!important;
+        }
+        
+    </style>
+</head>
+<body id="page-top">
+    <div id="notif"></div>
+
+    {% include "admin/top_bar.html" %}
+    <div class="page-container">
+      <div class="page-content">
+      <!-- Sidebar -->
+        {% include "admin/sidebar.html" %}
+
+            <div class="content-wrapper">
+   
+            {% block content %} {% endblock %}
+            
+            </div>
+        </div>
+    </div>
+    <button style="display:none;" type="button" id="modal-welcome" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal_theme_primary">Launch <i class="icon-play3 position-right"></i></button>
+    <div id="modal_theme_primary" class="modal fade" data-transition="shrinkIn">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3 class="modal-title"><center>Selamat Datang.</center></h3>
+          </div>
+
+          <div class="modal-body">
+            <div class="media-center"><center><img src="{{base_url}}assets/ltr/images/new-simpantas-logo-2.png" style="width: 100%;"></center></div>
+            <h6 class="text-semibold"><center>Apa itu <strong>SIM PANTAS</strong></center></h6>
+            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+            <hr>
+
+            <h6 class="text-semibold"><center>Sejarah, Visi, dan Misi</center></h6>
+            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal" id="close-modal-welcome">Lanjutkan</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="{{base_url}}logout">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <!-- Bootstrap DED -->
+    <!-- End Bootstrap modal -->
+    
+  
+
+    <!-- Core JS files -->
+	<script type="text/javascript" src="{{base_url}}assets/ltr/js/plugins/loaders/pace.min.js"></script>
+	<script type="text/javascript" src="{{base_url}}assets/ltr/js/core/libraries/jquery.min.js"></script>
+	<script type="text/javascript" src="{{base_url}}assets/ltr/js/core/libraries/bootstrap.min.js"></script>
+	<script type="text/javascript" src="{{base_url}}assets/ltr/js/plugins/loaders/blockui.min.js"></script>
+	<!-- /core JS files -->
+
+	<!-- Theme JS files -->
+	<script type="text/javascript" src="{{base_url}}assets/ltr/js/plugins/visualization/d3/d3.min.js"></script>
+	<script type="text/javascript" src="{{base_url}}assets/ltr/js/plugins/visualization/d3/d3_tooltip.js"></script>
+	<script type="text/javascript" src="{{base_url}}assets/ltr/js/plugins/forms/styling/switchery.min.js"></script>
+	<script type="text/javascript" src="{{base_url}}assets/ltr/js/plugins/forms/styling/uniform.min.js"></script>
+	<script type="text/javascript" src="{{base_url}}assets/ltr/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+	<script type="text/javascript" src="{{base_url}}assets/ltr/js/plugins/ui/moment/moment.min.js"></script>
+  <script type="text/javascript" src="{{base_url}}assets/ltr/js/plugins/pickers/daterangepicker.js"></script>
+  
+  <script type="text/javascript" src="{{base_url}}assets/ltr/js/plugins/tables/datatables/datatables.min.js"></script>
+	<script type="text/javascript" src="{{base_url}}assets/ltr/js/plugins/forms/selects/select2.min.js"></script>
+
+  <script type="text/javascript" src="{{base_url}}assets/ltr/js/plugins/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="{{base_url}}assets/ltr/js/plugins/velocity/velocity.ui.min.js"></script>
+  
+	<script type="text/javascript" src="{{base_url}}assets/ltr/js/core/app.js"></script>
+	<!-- <script type="text/javascript" src="{{base_url}}assets/ltr/js/pages/dashboard.js"></script> -->
+
+	<script type="text/javascript" src="{{base_url}}assets/ltr/js/plugins/ui/ripple.min.js"></script>
+   
+    <script type="text/javascript">
+    $(document).ready(function() {
+          var isshow = localStorage.getItem('isshow');
+          console.log(isshow);
+          if (isshow == null) {
+              localStorage.setItem('isshow', 1);
+
+              // Show popup here
+                  $('#modal-welcome').trigger('click');
+                  animationIn('#modal_theme_primary');
+
+          }
+
+    });
+        function notif(status, text) {
+          $("#notif").append('<div class="alert alert-'+status+' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'+text+'</div>');
+          $("#notif").fadeTo(36000, 100).slideUp(1000);
+         }
+
+    $('#page-header').css('padding-top', $('.navbar-fixed-top').height() + 'px');
+
+    // $('#modal-welcome').trigger('click');
+
+      
+      function animationIn(id){
+        // Add animation class to panel element
+        var transition = $(id).data("transition");
+        $(id).velocity("transition." + transition, { 
+          stagger: 1000,
+          duration: 1000
+        });
+      }
+
+      $('#logout-btn').on('click', function(){
+        localStorage.clear();
+      });
+    
+   
+    </script>
+    {% block js %} {% endblock %}
+    </div><!-- /#right-panel -->
+</body>
+</html>
