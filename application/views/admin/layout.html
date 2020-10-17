@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    
+
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -51,14 +51,14 @@
         .bg-koneng {
             background-color: #ffd035!important;
             border-color: #ffd035;
-            color: #fff;
+            color: #333;
         }
 
         .navbar-brand > img {
           margin-top: -12px!important;
           height: 45px!important;
         }
-        
+
     </style>
 </head>
 <body id="page-top">
@@ -71,9 +71,9 @@
         {% include "admin/sidebar.html" %}
 
             <div class="content-wrapper">
-   
+
             {% block content %} {% endblock %}
-            
+
             </div>
         </div>
     </div>
@@ -104,7 +104,7 @@
         </div>
       </div>
     </div>
-    
+
 
     <!-- Scroll to Top Button-->
   <a class="scroll-to-top rounded" href="#page-top">
@@ -132,8 +132,8 @@
 
       <!-- Bootstrap DED -->
     <!-- End Bootstrap modal -->
-    
-  
+
+
 
     <!-- Core JS files -->
 	<script type="text/javascript" src="{{base_url}}assets/ltr/js/plugins/loaders/pace.min.js"></script>
@@ -150,20 +150,24 @@
 	<script type="text/javascript" src="{{base_url}}assets/ltr/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
 	<script type="text/javascript" src="{{base_url}}assets/ltr/js/plugins/ui/moment/moment.min.js"></script>
   <script type="text/javascript" src="{{base_url}}assets/ltr/js/plugins/pickers/daterangepicker.js"></script>
-  
+
   <script type="text/javascript" src="{{base_url}}assets/ltr/js/plugins/tables/datatables/datatables.min.js"></script>
 	<script type="text/javascript" src="{{base_url}}assets/ltr/js/plugins/forms/selects/select2.min.js"></script>
 
   <script type="text/javascript" src="{{base_url}}assets/ltr/js/plugins/velocity/velocity.min.js"></script>
   <script type="text/javascript" src="{{base_url}}assets/ltr/js/plugins/velocity/velocity.ui.min.js"></script>
-  
+
 	<script type="text/javascript" src="{{base_url}}assets/ltr/js/core/app.js"></script>
 	<!-- <script type="text/javascript" src="{{base_url}}assets/ltr/js/pages/dashboard.js"></script> -->
 
 	<script type="text/javascript" src="{{base_url}}assets/ltr/js/plugins/ui/ripple.min.js"></script>
-   
+
     <script type="text/javascript">
     $(document).ready(function() {
+      $('.select-search').select2();
+      $('.select').select2({
+          minimumResultsForSearch: Infinity
+      });
           var isshow = localStorage.getItem('isshow');
           console.log(isshow);
           if (isshow == null) {
@@ -185,11 +189,11 @@
 
     // $('#modal-welcome').trigger('click');
 
-      
+
       function animationIn(id){
         // Add animation class to panel element
         var transition = $(id).data("transition");
-        $(id).velocity("transition." + transition, { 
+        $(id).velocity("transition." + transition, {
           stagger: 1000,
           duration: 1000
         });
@@ -198,8 +202,30 @@
       $('#logout-btn').on('click', function(){
         localStorage.clear();
       });
-    
-   
+
+      $.extend( $.fn.dataTable.defaults, {
+          autoWidth: false,
+          columnDefs: [{
+              orderable: false,
+              width: '100px',
+              targets: [ 5 ]
+          }],
+          dom: '<"datatable-header"fl><"datatable-scroll"t><"datatable-footer"ip>',
+          language: {
+              search: '<span>Filter:</span> _INPUT_',
+              searchPlaceholder: 'Type to filter...',
+              lengthMenu: '<span>Show:</span> _MENU_',
+              paginate: { 'first': 'First', 'last': 'Last', 'next': '&rarr;', 'previous': '&larr;' }
+          },
+          drawCallback: function () {
+              $(this).find('tbody tr').slice(-3).find('.dropdown, .btn-group').addClass('dropup');
+          },
+          preDrawCallback: function() {
+              $(this).find('tbody tr').slice(-3).find('.dropdown, .btn-group').removeClass('dropup');
+          }
+      });
+
+
     </script>
     {% block js %} {% endblock %}
     </div><!-- /#right-panel -->

@@ -55,8 +55,9 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 
-$route['^(logout|loginAdmin|Admin)(/:any)?$'] = "Auth/$0";
+$route['^(logout|loginAdmin|admin)(/:any)?$'] = "auth/$0";
 
-$route['^(Dashboard|saveUser|listUser|updateUser|formUser|listDataUser|deleteUser|dataDetailUser)(/:any)?$'] = "Sys/$0";
+$route['^(dashboard|saveUser|listUser|updateUser|formUser|listDataUser|deleteUser|dataDetailUser)(/:any)?$'] = "Sys/$0";
 
 $route['^(listPangan|listDataPangan|deletePangan|savePangan|updatePangan|formPangan|dataDetailPangan)(/:any)?$'] = "Pangan/$0";
+$route['^(provinsi|kabupaten|kecamatan|gapoktan|addprov|addkab|addkec|addpoktan)(/:any)?$'] = "Profile/$0";

@@ -543,7 +543,7 @@ a.badge,
 }
 .sidebar-default .navigation li > a:hover,
 .sidebar-default .navigation li > a:focus {
-  background-color: #f8f8f8;
+  background-color: #ffcc29;;
 }
 .sidebar-default .navigation li.active > a,
 .sidebar-default .navigation li.active > a:hover,
@@ -568,7 +568,7 @@ a.badge,
 .sidebar-default .navigation > li.active > a,
 .sidebar-default .navigation > li.active > a:hover,
 .sidebar-default .navigation > li.active > a:focus {
-  background-color: #f5f5f5;
+  background-color: #ffcc29;
   color: #333333;
 }
 .sidebar-default .navigation > li.active > a .label-transparent {
@@ -18085,7 +18085,7 @@ thead .htCollapseButton:after {
 *
 *  # Responsive extension
 *
-*  Optimise the table's layout for different screen sizes through the dynamic 
+*  Optimise the table's layout for different screen sizes through the dynamic
 *  insertion and removal of columns from the table
 *
 *  Version: 1.0

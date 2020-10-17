@@ -1,0 +1,313 @@
+{% extends "admin/layout.html" %} {% block content %}
+<div class="page-header page-header-default" id="page-header">
+
+    <div class="breadcrumb-line bg-hejo">
+      <ul class="breadcrumb">
+        <li><a href="index.html"><i class="icon-home4 position-left"></i> Home</a></li>
+        <li class="active">Profile Pengelola</li>
+        <li class="active">Data Kecamatan</li>
+        <li class="active">Tambah Data Gapoktan - Poktan</li>
+      </ul>
+
+      <ul class="breadcrumb-elements">
+        <li><a href="#"><i class="icon-comment-discussion position-left"></i> Support</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <i class="icon-gear position-left"></i>
+            Settings
+            <span class="caret"></span>
+          </a>
+
+          <ul class="dropdown-menu dropdown-menu-right">
+            <li><a href="#"><i class="icon-user-lock"></i> Account security</a></li>
+            <li><a href="#"><i class="icon-statistics"></i> Analytics</a></li>
+            <li><a href="#"><i class="icon-accessibility"></i> Accessibility</a></li>
+            <li class="divider"></li>
+            <li><a href="#"><i class="icon-gear"></i> All settings</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="panel panel-flat">
+      <div class="panel-heading bg-koneng">
+        <h5 class="panel-title"><b><i class="icon-add-to-list position-left"></i> Tambah Data Gapoktan - Poktan</b></h5>
+        <div class="heading-elements">
+          <ul class="icons-list">
+                    <li><a data-action="collapse"></a></li>
+                    <li><a data-action="reload"></a></li>
+                    <li><a data-action="close"></a></li>
+                  </ul>
+                </div>
+      </div>
+
+      <div class="panel-body">
+        <!-- <legend class="text-bold"></legend> -->
+        <br></br>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="panel panel-flat border-left-lg border-left-info">
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Nama Kelompok Tani Binaan :</label>
+                      <input type="text" class="form-control" placeholder="">
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Tahun Pembentukan :</label>
+                      <input type="text" class="form-control" placeholder="">
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Alamat Sekretariat :</label>
+                        <input type="text" class="form-control" placeholder="">
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Kelas dalam simluhtan :</label>
+                        <input type="text" class="form-control" placeholder="">
+                      </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label>Skor :</label>
+                        <input type="text" class="form-control" placeholder="">
+                      </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label>Tahun Penetapan :</label>
+                        <input type="text" class="form-control" placeholder="">
+                      </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label>Jumlah Anggota :</label>
+                        <input type="text" class="form-control" placeholder="">
+                      </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label>No :</label>
+                        <input type="text" class="form-control" placeholder="">
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label>Nama Anggota :</label>
+                        <input type="text" class="form-control" placeholder="">
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label>NIK Anggota :</label>
+                        <input type="text" class="form-control" placeholder="">
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label>Status dalam kelompok :</label>
+                      <select class="select">
+                          <option value="0">-Pilih status-</option>
+                          <option value="1">Ketua</option>
+                          <option value="2">Sekretaris</option>
+                          <option value="3">Bendahara</option>
+                          <option value="4">Anggota</option>
+                          <option value="5">Lainnya</option>
+                      </select>
+                      </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="panel panel-flat border-left-lg border-left-info">
+              <div class="panel-heading">
+									<h6 class="panel-title"><span class="text-semibold"># Luas Lahan Gapoktan / Poktan</span> (ha)</h6>
+								</div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Luas Sawah <code>(ha)</code> :</label>
+                      <input type="text" class="form-control" placeholder="">
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Luas Ladang <code>(ha)</code> :</label>
+                        <input type="text" class="form-control" placeholder="">
+                      </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label>Luas Lahan Sawah dan Ladang <code>(ha)</code> :</label>
+                        <input type="text" class="form-control" placeholder="">
+                      </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label>Indeks Pertanaman <code>(IP)</code> :</label>
+                      <input type="text" class="form-control" placeholder="">
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label>Hasil per Hektar <code>(Ku/Ha)</code> :</label>
+                        <input type="text" class="form-control" placeholder="">
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label>Produksi <code>(ton)</code> :</label>
+                        <input type="text" class="form-control" placeholder="">
+                      </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label>POLA TANAM :</label> <code>(contoh: padi-padi-jagung)</code>
+                        <input type="text" class="form-control" placeholder="">
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="panel panel-flat border-left-lg border-left-info">
+              <div class="panel-heading">
+									<h6 class="panel-title"><span class="text-semibold"># Gapoktan / Poktan</span></h6>
+								</div>
+              <div class="panel-body">
+                <div class="row">
+        					<div class="col-md-12">
+        						<div class="form-group">
+        							<label>Status Kepemilikan Lahan :</label>
+                      <select class="select">
+                          <option value="0">-Pilih status-</option>
+                          <option value="1">Pemilik Penggarap</option>
+                          <option value="2">Penggarap</option>
+                          <option value="3">Buruh Tani</option>
+    									</select>
+        			        </div>
+        					</div>
+        					<div class="col-md-4">
+        						<div class="form-group">
+        							<label>Komoditas :</label>
+                      <select class="select">
+                          <option value="0">-Pilih komoditas-</option>
+                          <option value="1">Padi</option>
+                          <option value="2">Jagung</option>
+                          <option value="3">Kedelai</option>
+                          <option value="4">Kacang Tanah</option>
+                          <option value="5">Kacang Hijau</option>
+                          <option value="6">Umbi-Umbian</option>
+                          <option value="7">Ubi Jalar</option>
+                          <option value="8">Ubi Kayu</option>
+                          <option value="9">sorgum</option>
+                          <option value="10">Ubi Cilembu</option>
+    									</select>
+        			        </div>
+        					</div>
+        					<div class="col-md-4">
+        						<div class="form-group">
+        							<label>Varietas :</label>
+                      <select class="select">
+                          <option value="0">-Pilih varietas-</option>
+                          <option value="1">Hibrida</option>
+                          <option value="2">Inbrida</option>
+                          <option value="3">Ciherang</option>
+                          <option value="4">Sintanur</option>
+    									</select>
+        			        </div>
+        					</div>
+        					<div class="col-md-4">
+        						<div class="form-group">
+        							<label>Bantuan Pemerintah :</label>
+                      <select class="select">
+                          <option value="0">-Pilih-</option>
+                          <option value="1">Benih</option>
+                          <option value="2">Alsintan</option>
+                          <option value="3">Seritifkasi</option>
+                      </select>
+        				      </div>
+        					</div>
+        					<div class="col-md-4">
+        						<div class="form-group">
+        							<label>Kepemilikan Aset :</label>
+                      <select class="select">
+                          <option value="0">-Pilih aset-</option>
+                          <option value="1">Kelompok</option>
+                          <option value="2">Brigade</option>
+                          <option value="3">Kabupaten</option>
+                      </select>
+        				      </div>
+        					</div>
+        					<div class="col-md-4">
+        						<div class="form-group">
+        							<label>Jumlah Aset :</label>
+        		          <input type="text" class="form-control" placeholder="">
+        			        </div>
+        					</div>
+        					<div class="col-md-4">
+        						<div class="form-group">
+        							<label>Tahun Perolehan :</label>
+        					      <input type="text" class="form-control" placeholder="">
+        				      </div>
+        					</div>
+        					<div class="col-md-6">
+        						<div class="form-group">
+        							<label>Sumber Perolehan Aset :</label>
+                      <select class="select">
+                          <option value="0">-Pilih Bantuan-</option>
+                          <option value="1">Bantuan APBN Pusat</option>
+                          <option value="2">Bantuan APBN TP Provinsi</option>
+                          <option value="3">Bantuan APBD Provinsi</option>
+                          <option value="4">Bantuan APBD Kabupaten</option>
+                          <option value="5">Swadaya</option>
+                      </select>
+        				      </div>
+        					</div>
+                  <div class="col-md-6">
+        						<div class="form-group">
+        							<label>Titik Koordinat :</label>
+        					      <input type="text" class="form-control" placeholder="">
+        				      </div>
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+          </div>
+    </div>
+
+    <div class="panel-footer">
+        <div class="heading-elements">
+            <div class="heading-btn pull-right">
+                <button type="button" id="btnSave" onclick="saveData()" class="btn btn-success">Simpan</button>
+                <button type="button" id="btnUpdate" onclick="updateData()" class="btn btn-primary">Update</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="{{base_url}}assets/js/action/addpoktandata.js"></script>
+{% endblock %}

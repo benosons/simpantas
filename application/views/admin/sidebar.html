@@ -11,12 +11,12 @@
 								<h6 style="color:black;">Kang Admin</h6>
 								<span class="text-size-small" style="color:black;">Bandung, Indonesia</span>
 							</div>
-														
+
 							<div class="sidebar-user-material-menu">
 								<a href="#user-nav" data-toggle="collapse"><span style="color:black;">My account</span> <i class="caret"></i></a>
 							</div>
 						</div>
-						
+
 						<div class="navigation-wrapper collapse" id="user-nav">
 							<ul class="navigation">
 								<li><a href="#"><i class="icon-user-plus"></i> <span>My profile</span></a></li>
@@ -34,14 +34,33 @@
 							<ul class="navigation navigation-main navigation-accordion">
 
 								<!-- Main -->
-                <li class="active"><a href="{{base_url}}Dashboard"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
+                <li id="menu-dashboard" class="active"><a href="{{base_url}}dashboard"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
                 {% if logs.kategori == "superAdmin" %}
+								<li id="menu-profile-pengelola"><a href="#"><i class="icon icon-profile"></i> <span>Profile Pengelola </span></a>
+									<ul>
+										<li><a id="data-provinsi" href="{{base_url}}provinsi">Data Provinsi</a></li>
+										<li><a id="data-kabupaten"href="{{base_url}}kabupaten">Data Kabupaten</a></li>
+										<li><a id="data-kecamatan" href="{{base_url}}kecamatan">Data BPP Kecamatan</a></li>
+										<li><a id="data-gapoktan" href="{{base_url}}gapoktan">Data GAPOKTAN / POKTAN</a></li>
+									</ul>
+								</li>
+								<li id="menu-realisasi-kegiatan"><a href="{{base_url}}listPangan"><i class="icon icon-windows2"></i> <span>Realisasi Kegiatan </span></a>
+									<ul>
+										<li><a href="#">APBN TP PROVINSI</a></li>
+										<li><a href="#">APBD PROVINSI</a></li>
+									</ul>
+								</li>
+								<li id="menu-realisasi-banpem"><a href="{{base_url}}listPangan"><i class="icon icon-browser"></i> <span>Realisasi Banpem </span></a>
+									<ul>
+										<li><a href="#">Transfer Uang</a></li>
+										<li><a href="#">Transfer Barang</a></li>
+									</ul>
+								</li>
 								<li><a href="{{base_url}}listPangan"><i class=" icon-list3"></i> <span>Pangan Berkualitas <span class="label bg-blue-400">1.6</span></span></a></li>
-                
                 <li><a href="{{base_url}}listUser"><i class="icon-people"></i> <span>Management User</span></a></li>
                 {% else %}
-				{% endif %}
-				<li><a data-toggle="modal" data-target="#modal_theme_primary"><i class="icon-info22"></i> <span>Tentang Aplikasi</span></a></li>
+								{% endif %}
+								<li><a data-toggle="modal" data-target="#modal_theme_primary"><i class="icon-info22"></i> <span>Tentang Aplikasi</span></a></li>
 
 								<!-- /main -->
 							</ul>
