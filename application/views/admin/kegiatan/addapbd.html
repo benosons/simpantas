@@ -1,0 +1,184 @@
+{% extends "admin/layout.html" %} {% block content %}
+<div class="page-header page-header-default" id="page-header">
+
+    <div class="breadcrumb-line bg-hejo">
+      <ul class="breadcrumb">
+        <li><a href="index.html"><i class="icon-home4 position-left"></i> Home</a></li>
+        <li class="active">Realisasi Kegiatan</li>
+        <li class="active">Data APBD Provinsi</li>
+        <li class="active">Tambah Data APBD Provinsi</li>
+      </ul>
+
+      <ul class="breadcrumb-elements">
+        <li><a href="#"><i class="icon-comment-discussion position-left"></i> Support</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <i class="icon-gear position-left"></i>
+            Settings
+            <span class="caret"></span>
+          </a>
+
+          <ul class="dropdown-menu dropdown-menu-right">
+            <li><a href="#"><i class="icon-user-lock"></i> Account security</a></li>
+            <li><a href="#"><i class="icon-statistics"></i> Analytics</a></li>
+            <li><a href="#"><i class="icon-accessibility"></i> Accessibility</a></li>
+            <li class="divider"></li>
+            <li><a href="#"><i class="icon-gear"></i> All settings</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="panel panel-flat">
+      <div class="panel-heading bg-koneng">
+        <h5 class="panel-title"><b><i class="icon-add-to-list position-left"></i> Tambah Data APBD Provinsi</b></h5>
+        <div class="heading-elements">
+          <ul class="icons-list">
+                    <li><a data-action="collapse"></a></li>
+                    <li><a data-action="reload"></a></li>
+                    <li><a data-action="close"></a></li>
+                  </ul>
+                </div>
+      </div>
+
+      <div class="panel-body">
+        <!-- <legend class="text-bold"></legend> -->
+        <br></br>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="panel panel-flat border-left-lg border-left-info">
+    					<div class="panel-body">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label>Kegiatan :</label>
+                      <input type="text" class="form-control" placeholder="">
+                      </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label>PROVINSI / KABUPATEN / KOTA :</label>
+                        <input type="text" class="form-control" placeholder="">
+                      </div>
+                  </div>
+                </div>
+    					</div>
+    				</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="panel panel-flat border-left-lg border-left-info">
+              <div class="panel-heading">
+									<h6 class="panel-title"><span class="text-semibold"># Realisasi Kegiatan</span></h6>
+							</div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label>Satuan :</label>
+                      <input type="text" class="form-control" placeholder="">
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="panel panel-flat border-left-lg border-left-danger">
+                      <div class="panel-heading">
+                          <h6 class="panel-title"><span class="text-semibold"># Target DIPA</span></h6>
+                      </div>
+                      <div class="panel-body">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label>Vol/Fisik :</label>
+                              <input type="text" class="form-control" placeholder="">
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label>Rp :</label>
+                                <input type="text" class="form-control" placeholder="">
+                              </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="panel panel-flat border-left-lg border-left-danger">
+                      <div class="panel-heading">
+                          <h6 class="panel-title"><span class="text-semibold"># Realisasi</span></h6>
+                      </div>
+                      <div class="panel-body">
+                        <div class="row">
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label>Vol/Fisik :</label>
+                              <input type="text" class="form-control" placeholder="">
+                              </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label>% :</label>
+                              <input type="text" class="form-control" placeholder="">
+                              </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label>Rp :</label>
+                              <select class="select">
+                                  <option value="0">-Pilih-</option>
+                                  <option value="1">Kabid</option>
+                                  <option value="2">Kasie Serealia</option>
+                                  <option value="3">Kasie AKABI</option>
+                                  <option value="4">Kasie Pascapanen</option>
+                              </select>
+                              </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label>% :</label>
+                              <input type="text" class="form-control" placeholder="">
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Permasalahan :</label>
+                      <input type="text" class="form-control" placeholder="">
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Tindak Lanjut :</label>
+                      <input type="text" class="form-control" placeholder="">
+                      </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="panel-footer">
+        <div class="heading-elements">
+            <div class="heading-btn pull-right">
+                <button type="button" id="btnSave" onclick="saveData()" class="btn btn-success">Simpan</button>
+                <button type="button" id="btnUpdate" onclick="updateData()" class="btn btn-primary">Update</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="{{base_url}}assets/js/action/kegiatan/addapbd.js"></script>
+{% endblock %}

@@ -46,17 +46,17 @@
 								</li>
 								<li id="menu-realisasi-kegiatan"><a href="{{base_url}}listPangan"><i class="icon icon-windows2"></i> <span>Realisasi Kegiatan </span></a>
 									<ul>
-										<li><a href="#">APBN TP PROVINSI</a></li>
-										<li><a href="#">APBD PROVINSI</a></li>
+										<li><a id="data-apbntp" href="{{base_url}}apbntp">APBN TP PROVINSI</a></li>
+										<li><a id="data-apbd" href="{{base_url}}apbd">APBD PROVINSI</a></li>
 									</ul>
 								</li>
 								<li id="menu-realisasi-banpem"><a href="{{base_url}}listPangan"><i class="icon icon-browser"></i> <span>Realisasi Banpem </span></a>
 									<ul>
-										<li><a href="#">Transfer Uang</a></li>
-										<li><a href="#">Transfer Barang</a></li>
+										<li><a id="data-transuang" href="{{base_url}}transuang">Transfer Uang</a></li>
+										<li><a id="data-transbarang" href="{{base_url}}transbarang">Transfer Barang</a></li>
 									</ul>
 								</li>
-								<li><a href="{{base_url}}listPangan"><i class=" icon-list3"></i> <span>Pangan Berkualitas <span class="label bg-blue-400">1.6</span></span></a></li>
+								<!-- <li><a href="{{base_url}}listPangan"><i class=" icon-list3"></i> <span>Pangan Berkualitas <span class="label bg-blue-400">1.6</span></span></a></li> -->
                 <li><a href="{{base_url}}listUser"><i class="icon-people"></i> <span>Management User</span></a></li>
                 {% else %}
 								{% endif %}
