@@ -22,7 +22,7 @@ class Profile extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Model_pangan');
+		$this->load->model('Model_profile');
 		$this->logs = $this->session->all_userdata();
 		$this->logged = $this->session->userdata('userLogged');
 		$this->kategori = $this->session->userdata('kategori');
@@ -180,17 +180,67 @@ class Profile extends CI_Controller {
 		}
 	}
 
-	public function savePangan()
+	public function savedataprovinsi()
 	{
 		if ( $this->logged && $this->kategori == 'admin' || $this->kategori == 'superAdmin')
 		{
-			$params = (object)$this->input->post();
- 	        $data = $this->Model_pangan->save($params);
- 	        echo json_encode(array("status" => TRUE));
+					$params = (object)$this->input->post();
+
+					$data = $this->Model_profile->save_provinsi($params);
+					header('Content-Type: application/json');
+					echo json_encode(array("status" => TRUE));
 		}
 		else
 		{
-			redirect("Dashboard");
+			redirect("dashboard");
+		}
+	}
+
+	public function savedatakabupaten()
+	{
+		if ( $this->logged && $this->kategori == 'admin' || $this->kategori == 'superAdmin')
+		{
+					$params = (object)$this->input->post();
+
+					$data = $this->Model_profile->save_kabupaten($params);
+					header('Content-Type: application/json');
+					echo json_encode(array("status" => TRUE));
+		}
+		else
+		{
+			redirect("dashboard");
+		}
+	}
+
+	public function savedatakecamatan()
+	{
+		if ( $this->logged && $this->kategori == 'admin' || $this->kategori == 'superAdmin')
+		{
+					$params = (object)$this->input->post();
+
+					$data = $this->Model_profile->save_kecamatan($params);
+					header('Content-Type: application/json');
+					echo json_encode(array("status" => TRUE));
+		}
+		else
+		{
+			redirect("dashboard");
+		}
+	}
+
+	public function savedatapoktan()
+	{
+		if ( $this->logged && $this->kategori == 'admin' || $this->kategori == 'superAdmin')
+		{
+					$params = (object)$this->input->post();
+
+					$data = $this->Model_profile->save_poktan($params);
+					header('Content-Type: application/json');
+					echo json_encode(array("status" => TRUE));
+		}
+		else
+		{
+			redirect("dashboard");
 		}
 	}
 
@@ -259,18 +309,112 @@ class Profile extends CI_Controller {
 
 	}
 
-	public function dataDetailPangan()
-	{
-		if ($this->logged && $this->kategori == 'admin' || $this->kategori == 'superAdmin')
-		{
-			$no = $_POST['no'];
-			$data = $this->Model_pangan->dataDetail($no);
-			echo json_encode($data);
-		}
-		else
-		{
-			redirect("Dashboard");
-		}
-	}
+	public function loadprovinsi()	{
+
+			// $params = $columns = $totalRecords = $data = array();
+			// $params = $_REQUEST;
+			// $postData = $this->input->post('param');
+
+			$query = $this->Model_profile->loadprovinsi();
+			// foreach ($query as $key => $value) {
+			// 	print_r($value);die;
+			// }
+			// foreach ($query as $proses) {
+			// 	$x++;
+			// 	$row = array();
+			// 	$row['id'] = (!empty($proses->id) ? $proses->id : "NULL");
+			// 	$row['name'] = (!empty($proses->name) ? $proses->name : "NULL");
+			// 	$row['id_user'] = (!empty($proses->id_user) ? $proses->id_user : "NULL");
+			// 	$row['judul'] = (!empty($proses->judul) ? $proses->judul : "NULL");
+			// 	$row['isi'] = (!empty($proses->isi) ? $proses->isi : "NULL");
+			// 	$row['create_date'] = (!empty($proses->create_date) ? $proses->create_date : "NULL");
+			//
+			//
+			// }
+
+	header('Content-Type: application/json');
+	echo json_encode($query);
+}
+
+	public function loadkabupaten()	{
+
+			// $params = $columns = $totalRecords = $data = array();
+			// $params = $_REQUEST;
+			// $postData = $this->input->post('param');
+
+			$query = $this->Model_profile->loadkabupaten();
+			// foreach ($query as $key => $value) {
+			// 	print_r($value);die;
+			// }
+			// foreach ($query as $proses) {
+			// 	$x++;
+			// 	$row = array();
+			// 	$row['id'] = (!empty($proses->id) ? $proses->id : "NULL");
+			// 	$row['name'] = (!empty($proses->name) ? $proses->name : "NULL");
+			// 	$row['id_user'] = (!empty($proses->id_user) ? $proses->id_user : "NULL");
+			// 	$row['judul'] = (!empty($proses->judul) ? $proses->judul : "NULL");
+			// 	$row['isi'] = (!empty($proses->isi) ? $proses->isi : "NULL");
+			// 	$row['create_date'] = (!empty($proses->create_date) ? $proses->create_date : "NULL");
+			//
+			//
+			// }
+
+	header('Content-Type: application/json');
+	echo json_encode($query);
+}
+
+	public function loadkecamatan()	{
+
+			// $params = $columns = $totalRecords = $data = array();
+			// $params = $_REQUEST;
+			// $postData = $this->input->post('param');
+
+			$query = $this->Model_profile->loadkecamatan();
+			// foreach ($query as $key => $value) {
+			// 	print_r($value);die;
+			// }
+			// foreach ($query as $proses) {
+			// 	$x++;
+			// 	$row = array();
+			// 	$row['id'] = (!empty($proses->id) ? $proses->id : "NULL");
+			// 	$row['name'] = (!empty($proses->name) ? $proses->name : "NULL");
+			// 	$row['id_user'] = (!empty($proses->id_user) ? $proses->id_user : "NULL");
+			// 	$row['judul'] = (!empty($proses->judul) ? $proses->judul : "NULL");
+			// 	$row['isi'] = (!empty($proses->isi) ? $proses->isi : "NULL");
+			// 	$row['create_date'] = (!empty($proses->create_date) ? $proses->create_date : "NULL");
+			//
+			//
+			// }
+
+	header('Content-Type: application/json');
+	echo json_encode($query);
+}
+
+	public function loadpoktan()	{
+
+			// $params = $columns = $totalRecords = $data = array();
+			// $params = $_REQUEST;
+			// $postData = $this->input->post('param');
+
+			$query = $this->Model_profile->loadpoktan();
+			// foreach ($query as $key => $value) {
+			// 	print_r($value);die;
+			// }
+			// foreach ($query as $proses) {
+			// 	$x++;
+			// 	$row = array();
+			// 	$row['id'] = (!empty($proses->id) ? $proses->id : "NULL");
+			// 	$row['name'] = (!empty($proses->name) ? $proses->name : "NULL");
+			// 	$row['id_user'] = (!empty($proses->id_user) ? $proses->id_user : "NULL");
+			// 	$row['judul'] = (!empty($proses->judul) ? $proses->judul : "NULL");
+			// 	$row['isi'] = (!empty($proses->isi) ? $proses->isi : "NULL");
+			// 	$row['create_date'] = (!empty($proses->create_date) ? $proses->create_date : "NULL");
+			//
+			//
+			// }
+
+	header('Content-Type: application/json');
+	echo json_encode($query);
+}
 
 }
