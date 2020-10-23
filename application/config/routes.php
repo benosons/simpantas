@@ -61,5 +61,5 @@ $route['^(dashboard|saveUser|listUser|updateUser|formUser|listDataUser|deleteUse
 
 $route['^(listPangan|listDataPangan|deletePangan|savePangan|updatePangan|formPangan|dataDetailPangan)(/:any)?$'] = "Pangan/$0";
 $route['^(provinsi|kabupaten|kecamatan|gapoktan|addprov|addkab|addkec|addpoktan|savedataprovinsi|savedatakabupaten|savedatakecamatan|savedatapoktan|loadprovinsi|loadkabupaten|loadkecamatan|loadpoktan)(/:any)?$'] = "Profile/$0";
-$route['^(apbntp|apbd|addapbntp|addapbd)(/:any)?$'] = "Kegiatan/$0";
-$route['^(transuang|transbarang|addtransuang|addtransbarang)(/:any)?$'] = "Realisasi/$0";
+$route['^(apbntp|apbd|addapbntp|addapbd|saveapbntp|saveapbd)(/:any)?$'] = "Kegiatan/$0";
+$route['^(transuang|transbarang|addtransuang|addtransbarang|savetransuang|savetransbarang)(/:any)?$'] = "Banpem/$0";

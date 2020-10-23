@@ -22,7 +22,7 @@ class Kegiatan extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Model_pangan');
+		$this->load->model('Model_kegiatan');
 		$this->logs = $this->session->all_userdata();
 		$this->logged = $this->session->userdata('userLogged');
 		$this->kategori = $this->session->userdata('kategori');
@@ -250,6 +250,38 @@ class Kegiatan extends CI_Controller {
 		else
 		{
 			redirect("Dashboard");
+		}
+	}
+
+	public function saveapbntp()
+	{
+		if ( $this->logged && $this->kategori == 'admin' || $this->kategori == 'superAdmin')
+		{
+					$params = (object)$this->input->post();
+
+					$data = $this->Model_kegiatan->save_apbntp($params);
+					header('Content-Type: application/json');
+					echo json_encode(array("status" => TRUE));
+		}
+		else
+		{
+			redirect("dashboard");
+		}
+	}
+
+	public function saveapbd()
+	{
+		if ( $this->logged && $this->kategori == 'admin' || $this->kategori == 'superAdmin')
+		{
+					$params = (object)$this->input->post();
+
+					$data = $this->Model_kegiatan->save_apbd($params);
+					header('Content-Type: application/json');
+					echo json_encode(array("status" => TRUE));
+		}
+		else
+		{
+			redirect("dashboard");
 		}
 	}
 

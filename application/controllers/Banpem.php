@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Realisasi extends CI_Controller {
+class Banpem extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -22,7 +22,7 @@ class Realisasi extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Model_pangan');
+		$this->load->model('Model_banpem');
 		$this->logs = $this->session->all_userdata();
 		$this->logged = $this->session->userdata('userLogged');
 		$this->kategori = $this->session->userdata('kategori');
@@ -39,7 +39,7 @@ class Realisasi extends CI_Controller {
 	{
 		if ( $this->logged && $this->kategori == 'admin' || $this->kategori == 'superAdmin')
 		{
-			$this->twig->display('admin/realisasi/transuang.html', $this->content);
+			$this->twig->display('admin/banpem/transuang.html', $this->content);
 		}else{
 			redirect("dashboard");
 		}
@@ -49,7 +49,7 @@ class Realisasi extends CI_Controller {
 	{
 		if ( $this->logged && $this->kategori == 'admin' || $this->kategori == 'superAdmin')
 		{
-			$this->twig->display('admin/realisasi/transbarang.html', $this->content);
+			$this->twig->display('admin/banpem/transbarang.html', $this->content);
 		}else{
 			redirect("dashboard");
 		}
@@ -70,7 +70,7 @@ class Realisasi extends CI_Controller {
             }
 
             $this->content['data'] = $data;
-			$this->twig->display('admin/realisasi/addtransuang.html', $this->content);
+			$this->twig->display('admin/banpem/addtransuang.html', $this->content);
 		}else{
 			redirect("dashboard");
 		}
@@ -91,7 +91,7 @@ class Realisasi extends CI_Controller {
             }
 
             $this->content['data'] = $data;
-			$this->twig->display('admin/realisasi/addtransbarang.html', $this->content);
+			$this->twig->display('admin/banpem/addtransbarang.html', $this->content);
 		}else{
 			redirect("Dashboard");
 		}
@@ -250,6 +250,38 @@ class Realisasi extends CI_Controller {
 		else
 		{
 			redirect("Dashboard");
+		}
+	}
+
+	public function savetransuang()
+	{
+		if ( $this->logged && $this->kategori == 'admin' || $this->kategori == 'superAdmin')
+		{
+					$params = (object)$this->input->post();
+
+					$data = $this->Model_banpem->save_transuang($params);
+					header('Content-Type: application/json');
+					echo json_encode(array("status" => TRUE));
+		}
+		else
+		{
+			redirect("dashboard");
+		}
+	}
+
+	public function savetransbarang()
+	{
+		if ( $this->logged && $this->kategori == 'admin' || $this->kategori == 'superAdmin')
+		{
+					$params = (object)$this->input->post();
+
+					$data = $this->Model_banpem->save_transbarang($params);
+					header('Content-Type: application/json');
+					echo json_encode(array("status" => TRUE));
+		}
+		else
+		{
+			redirect("dashboard");
 		}
 	}
 

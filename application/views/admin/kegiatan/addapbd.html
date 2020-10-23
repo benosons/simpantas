@@ -54,13 +54,13 @@
                   <div class="col-md-12">
                     <div class="form-group">
                       <label>Kegiatan :</label>
-                      <input type="text" class="form-control" placeholder="">
+                      <input id="kegiatan" type="text" class="form-control" placeholder="">
                       </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
                       <label>PROVINSI / KABUPATEN / KOTA :</label>
-                        <input type="text" class="form-control" placeholder="">
+                        <input id="prov_kab_kot" type="text" class="form-control" placeholder="">
                       </div>
                   </div>
                 </div>
@@ -80,7 +80,7 @@
                   <div class="col-md-12">
                     <div class="form-group">
                       <label>Satuan :</label>
-                      <input type="text" class="form-control" placeholder="">
+                      <input id="satuan" type="text" class="form-control" placeholder="">
                       </div>
                   </div>
                   <div class="col-md-4">
@@ -93,13 +93,13 @@
                           <div class="col-md-6">
                             <div class="form-group">
                               <label>Vol/Fisik :</label>
-                              <input type="text" class="form-control" placeholder="">
+                              <input id="target_vol" type="text" class="form-control" placeholder="">
                               </div>
                           </div>
                           <div class="col-md-6">
                             <div class="form-group">
                               <label>Rp :</label>
-                                <input type="text" class="form-control" placeholder="">
+                                <input id="target_rp"type="text" class="form-control" placeholder="">
                               </div>
                           </div>
 
@@ -117,19 +117,19 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label>Vol/Fisik :</label>
-                              <input type="text" class="form-control" placeholder="">
+                              <input id="realis_vol" type="text" class="form-control" placeholder="">
                               </div>
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
                               <label>% :</label>
-                              <input type="text" class="form-control" placeholder="">
+                              <input id="relais_persen_1" type="text" class="form-control" placeholder="">
                               </div>
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
                               <label>Rp :</label>
-                              <select class="select">
+                              <select id="realis_rp" class="select">
                                   <option value="0">-Pilih-</option>
                                   <option value="1">Kabid</option>
                                   <option value="2">Kasie Serealia</option>
@@ -141,7 +141,7 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label>% :</label>
-                              <input type="text" class="form-control" placeholder="">
+                              <input id="realis_persen_2" type="text" class="form-control" placeholder="">
                               </div>
                           </div>
                         </div>
@@ -151,13 +151,13 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label>Permasalahan :</label>
-                      <input type="text" class="form-control" placeholder="">
+                      <input id="permasalahan" type="text" class="form-control" placeholder="">
                       </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
                       <label>Tindak Lanjut :</label>
-                      <input type="text" class="form-control" placeholder="">
+                      <input id="tindak_lanjut" type="text" class="form-control" placeholder="">
                       </div>
                   </div>
                 </div>
@@ -169,7 +169,7 @@
     <div class="panel-footer">
         <div class="heading-elements">
             <div class="heading-btn pull-right">
-                <button type="button" id="btnSave" onclick="saveData()" class="btn btn-success">Simpan</button>
+                <button type="button" id="btnSave" class="btn btn-success">Simpan</button>
                 <button type="button" id="btnUpdate" onclick="updateData()" class="btn btn-primary">Update</button>
             </div>
         </div>
